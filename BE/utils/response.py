@@ -1,5 +1,6 @@
 message_table = {
     200: 'success',
+    404: 'not found',
     500: 'internal server error',
 }
 
