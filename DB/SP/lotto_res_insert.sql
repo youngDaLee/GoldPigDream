@@ -31,4 +31,5 @@ LAST UPDATE : 2022-06-19
     INSERT INTO lotto_db.lotto_tb(`round`, lotto_no, bonus_no, 1st_prize, 2nd_prize, 3rd_prize, 4th_prize, 5th_prize) 
     VALUES(i_round, i_lotto_no, i_bonus_no, i_1st_prize, i_2nd_prize, i_3rd_prize, i_4th_prize, i_5th_prize);
 
+    SET o_out_code = 0;
 END
