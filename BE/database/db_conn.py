@@ -44,5 +44,5 @@ try:
     print("CONNECT!!")
 except Exception as e:
     msg = "[Emergency Error] service cannot connect to PostgreSQL - \
-           [host: {}, db: {}, error: {}]".format(HEALTH_DATABASE['host'], HEALTH_DATABASE['db'], e)
+           [host: {}, db: {}, error: {}]".format(LOTTO_DATABASE['host'], LOTTO_DATABASE['db'], e)
     print(msg)
