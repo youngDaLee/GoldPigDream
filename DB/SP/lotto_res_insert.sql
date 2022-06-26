@@ -1,4 +1,4 @@
-CREATE PROCEDURE `lotto_res_insert` (
+CREATE DEFINER=`root`@`%` PROCEDURE `lotto_res_insert` (
      IN i_round         INT             -- 로또 회차 정보(1회)
     ,IN i_lotto_no      VARCHAR(80)     -- 로또 당첨 번호(1,2,3,4,5,6)
     ,IN i_bonus_no      VARCHAR(10)     -- 로또 보너스 번호

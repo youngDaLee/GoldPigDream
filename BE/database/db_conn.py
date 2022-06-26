@@ -29,17 +29,17 @@ def db_conn(func):
 # Connect to health Database
 try:
     LOTTO_DB = PooledDB(
-        creator=pymysql,
+        creator=pymysql,  # mysql
         mincached=DATABASE['mincached'],
-        maxconnections=DATABASE['maxconnections'],
+        maxconnections=DATABASE['maxconnections'],  # 10
         blocking=True,
-        host=LOTTO_DATABASE['host'],
-        port=LOTTO_DATABASE['port'],
-        user=LOTTO_DATABASE['id'],
-        password=LOTTO_DATABASE['pw'],
-        dbname=LOTTO_DATABASE['db'],
-        connect_timeout=DATABASE['connect_timeout'],
-        ping=DATABASE['ping'],
+        host=LOTTO_DATABASE['host'],  # 127.0.0.1
+        port=LOTTO_DATABASE['port'],  # 3306
+        user=LOTTO_DATABASE['id'],    # npnc
+        password=LOTTO_DATABASE['pw'],# asdf
+        dbname=LOTTO_DATABASE['db'],  # lotto_db
+        connect_timeout=DATABASE['connect_timeout'],  # 10
+        ping=DATABASE['ping'],  # 2
     )
     print("CONNECT!!")
 except Exception as e:

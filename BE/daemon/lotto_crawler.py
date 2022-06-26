@@ -1,18 +1,11 @@
 import re
-import sys
-
-import urllib.request as req
 from bs4 import BeautifulSoup
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
 
 
 def cleaning(text):
-    onlynum = re.sub('[,��]','',text)
+    onlynum = re.sub('[,원]','',text)
     # regex = re.compile(r'\d')
     # matchobj = regex.search(onlynum)
     # num = int(matchobj.group())
@@ -43,8 +36,6 @@ def crawl_lotto_all():
     browser.implicitly_wait(5)
 
     base = 'https://dhlottery.co.kr/gameResult.do?method=byWin&drwNo='
-
-    result = []
 
     for page in range(1, 2):
 
