@@ -1,3 +1,5 @@
+from fastapi.responses import JSONResponse
+
 message_table = {
     200: 'success',
     404: 'not found',
@@ -9,8 +11,11 @@ def response(status, data={}, message=None):
     if not message:
         message = message_table[status]
 
-    return {
-        'status': status,
-        'message': message,
-        'data': data
-    }
+    return JSONResponse(
+        status_code=status,
+        content={
+            'status_code': status,
+            'data': data,
+            'message': message,
+        }
+    )
