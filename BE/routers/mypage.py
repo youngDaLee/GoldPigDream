@@ -3,7 +3,7 @@ from utils.response import response
 
 
 router = APIRouter(
-    prepfix='mypage',
+    prefix='/mypage',
     tags=['mypage'],
-    response=response(404)
+    responses=response(404)
 )

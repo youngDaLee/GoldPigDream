@@ -1,4 +1,3 @@
-from email.policy import default
 from typing import Union
 from fastapi import APIRouter
 from fastapi import Header
@@ -7,9 +6,9 @@ from utils.response import response
 
 
 router = APIRouter(
-    prepfix='/game',
+    prefix='/game',
     tags=['game'],
-    response=response(404)
+    responses=response(404),
 )
 
 class EnterLottoNumItem(BaseModel):

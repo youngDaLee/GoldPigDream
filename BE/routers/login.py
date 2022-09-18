@@ -3,7 +3,7 @@ from utils.response import response
 
 
 router = APIRouter(
-    prepfix='login',
+    prefix='/login',
     tags=['login'],
-    response=response(404)
+    responses=response(404),
 )
